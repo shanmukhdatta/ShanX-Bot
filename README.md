@@ -9,10 +9,10 @@ A premium, next-generation multi-model agentic AI assistant with a stunning glas
 ---
 
 ## 🚀 Recent Updates
+- **Deployment Migration**: Successfully migrated deployment strategy to **Vercel** (Frontend) and **Render** (Backend).
 - **Firebase Auth Fixes**: Implemented forced account selection on sign-out to ensure a clean session and allow easy account switching.
 - **Enhanced Super Intelligence**: Improved parallel processing and synthesis logic for more accurate multi-model reasoning.
 - **Premium Glassmorphism**: Refined UI with deeper blur effects, animated neural backgrounds, and emerald color palettes.
-- **Deployment Ready**: Added configurations for seamless deployment on Vercel (Frontend) and Railway (Backend).
 
 ---
 
@@ -32,14 +32,14 @@ A premium, next-generation multi-model agentic AI assistant with a stunning glas
 
 ## 🚀 Deployment Guide
 
-### 1. Backend (Railway)
-1. **Prepare**: Ensure `backend/Procfile` and `backend/requirements.txt` are present.
-2. **Deploy**: Push the `backend` folder to a new Railway project or link your GitHub repo.
-3. **Environment Variables**: Add your API keys to Railway (optional, as users can provide their own):
+### 1. Backend (Render)
+1. **Prepare**: Ensure `render.yaml` and `backend/requirements.txt` are present.
+2. **Deploy**: Create a new **Web Service** on Render and point it to the `backend` directory.
+3. **Environment Variables**: Add your API keys to Render (optional, as users can provide their own):
    - `GROQ_API_KEY`
    - `GEMINI_API_KEY`
    - `OPENROUTER_API_KEY`
-4. **Networking**: Railway will automatically use the `PORT` variable provided in the `Procfile`.
+4. **Networking**: Render will automatically use the `PORT` variable.
 
 ### 2. Frontend (Vercel)
 1. **Prepare**: Ensure `frontend/vercel.json` is present for SPA routing.
@@ -50,7 +50,7 @@ A premium, next-generation multi-model agentic AI assistant with a stunning glas
    - Build Command: `npm run build`
    - Output Directory: `dist`
 4. **Environment Variables**: Add the following:
-   - `VITE_API_BASE`: (Your Railway Backend URL, e.g., `https://shanx-bot-production.up.railway.app`)
+   - `VITE_API_BASE`: (Your Render Backend URL, e.g., `https://shanxbot-backend.onrender.com`)
    - Firebase variables (copy from `.env.example` or your Firebase Console)
 
 ---
@@ -93,10 +93,11 @@ shanxbot/
 │   │   └── utils/          # API & Helpers
 │   └── vercel.json         # Vercel SPA config
 │
-└── backend/                # FastAPI + LangChain
-    ├── main.py             # Main entry point
-    ├── Procfile            # Railway deployment config
-    └── requirements.txt    # Python dependencies
+├── backend/                # FastAPI + LangChain
+│   ├── main.py             # Main entry point
+│   └── requirements.txt    # Python dependencies
+│
+└── render.yaml             # Render deployment config
 ```
 
 ---
