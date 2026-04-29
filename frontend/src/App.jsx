@@ -15,7 +15,7 @@ import { useChatStore } from './stores/chatStore'
 import { useSettingsStore } from './stores/settingsStore'
 import { useAuthStore } from './stores/authStore'
 
-// During deployment, VITE_API_BASE should be set to your Railway backend URL.
+// During deployment, VITE_API_BASE should be set to your Render backend URL.
 const API_BASE = import.meta.env.VITE_API_BASE // || 'http://localhost:8000'
 
 
