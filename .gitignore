@@ -20,4 +20,3 @@ frontend/.env
 frontend/.env.local
 backend/.env
 
-deployment_guide.md
