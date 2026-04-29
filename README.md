@@ -8,6 +8,12 @@ A premium, next-generation multi-model agentic AI assistant with a stunning glas
 
 ---
 
+## 🌐 Live Demo
+- **Frontend**: [https://shan-x-bot.vercel.app/](https://shan-x-bot.vercel.app/)
+- **Backend**: [https://shanxbot-backend.onrender.com](https://shanxbot-backend.onrender.com)
+
+---
+
 ## 🚀 Recent Updates
 - **Deployment Migration**: Successfully migrated deployment strategy to **Vercel** (Frontend) and **Render** (Backend).
 - **Firebase Auth Fixes**: Implemented forced account selection on sign-out to ensure a clean session and allow easy account switching.
